@@ -75,51 +75,51 @@ python manage.py createsuperuser
 
 ### 登陆界面
 
-![image-20200607103447297](C:\Users\周全\AppData\Roaming\Typora\typora-user-images\image-20200607103447297.png)
+https://s1.ax1x.com/2020/06/07/tgW15d.md.png
 
 ### 管理系统首页
 
-![image-20200607103332310](C:\Users\周全\AppData\Roaming\Typora\typora-user-images\image-20200607103332310.png)
+https://s1.ax1x.com/2020/06/07/tgWG8I.md.png
 
-![image-20200607103408488](C:\Users\周全\AppData\Roaming\Typora\typora-user-images\image-20200607103408488.png)
+https://s1.ax1x.com/2020/06/07/tgWuDO.md.png
 
 ### 网吧公告
 
 可输入查询关键词进行模糊查询
 
-![image-20200607103604357](C:\Users\周全\AppData\Roaming\Typora\typora-user-images\image-20200607103604357.png)
+https://s1.ax1x.com/2020/06/07/tgWnKK.md.png
 
 ### 消费信息
 
 展示当前用户的全部消费细节
 
-![image-20200607103629527](C:\Users\周全\AppData\Roaming\Typora\typora-user-images\image-20200607103629527.png)
+https://s1.ax1x.com/2020/06/07/tgWev6.md.png
 
 ### 预定座位
 
 可以选择座位，显示订单，可取消订单
 
-![image-20200607103702212](C:\Users\周全\AppData\Roaming\Typora\typora-user-images\image-20200607103702212.png)
+https://s1.ax1x.com/2020/06/07/tgWlUH.md.png
 
-![image-20200607103714893](C:\Users\周全\AppData\Roaming\Typora\typora-user-images\image-20200607103714893.png)
+https://s1.ax1x.com/2020/06/07/tgWQVe.md.png
 
 ### 个人信息
 
 个人资料栏，可进行信息编辑和充值
 
-![image-20200607103858990](C:\Users\周全\AppData\Roaming\Typora\typora-user-images\image-20200607103858990.png)
+https://s1.ax1x.com/2020/06/07/tgWKbD.md.png
 
 ### 购买商品
 
 展示商品信息，购物车功能可对商品进行剔除，最后付款
 
-![image-20200607103938002](C:\Users\周全\AppData\Roaming\Typora\typora-user-images\image-20200607103938002.png)
+https://s1.ax1x.com/2020/06/07/tgW8PA.md.png
 
 ### 留言板
 
 提交留言和查询留言，支持模糊查询功能
 
-![image-20200607104116801](C:\Users\周全\AppData\Roaming\Typora\typora-user-images\image-20200607104116801.png)
+https://s1.ax1x.com/2020/06/07/tgWJ2t.md.png
 
 ## 帮助
 
