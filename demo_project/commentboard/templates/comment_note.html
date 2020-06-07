@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/images/favicon.ico" rel="SHORTCUT ICON">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- js -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/static/assets/css/templatemo-style.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.css">
+    <title>留言板</title>
+</head>
+<body background="/static/images/email-pattern.png">
+    <nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/login/">主页</a>
+            </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/notice/">公告</a></li>
+                        <li class="active"><a href="/consume/">消费信息</a></li>
+                        <li class="active"><a href="/appointment/">预定座位</a></li>
+                        <li class="active"><a href="/personal_info/show/">个人信息</a></li>
+                        <li class="active"><a href="/products/">购买商品</a></li>
+                        <li class="active"><a href="/comment/submit/">留言板</a></li>
+                    </ul>
+                </div>
+	</div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 style="text-align: center">留言区</h1>
+        </div>
+    </div>
+    <h2 style="text-align: center">请提交你的留言</h2>
+    <div class="container-fluid" style="width: auto; text-align: center">
+         <section class="contact-form">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-6">
+                    <form action="/comment/submit/" method="post">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <fieldset>
+                            <input name="nickname" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                          </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                          <fieldset>
+                            <input name="date" type="date" class="form-control" id="date" placeholder="The Date" required="">
+                          </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                          <fieldset>
+                            <textarea name="info" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                          </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                          <fieldset>
+                              <button type="submit" id="form-submit" class="button">Send Message</button>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-md-6">
+                    <div id="map">
+                    <!-- How to change your own map point
+                           1. Go to Google Maps
+                           2. Click on your location point
+                           3. Click "Share" and choose "Embed map" tab
+                           4. Copy only URL and paste it within the src="" field below
+                    -->
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2726.1184161386404!2d118.84039831446763!3d32.03340352883547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b58d6eaf4c188f%3A0xdd32e64c8e32bc10!2z5Y2X5Lqs5Yac5Lia5aSn5a2m!5e1!3m2!1szh-CN!2skr!4v1591461852920!5m2!1szh-CN!2skr" width="500" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    </section>
+    </div>
+    <br>
+    <br>
+        <h2 style="text-align: center">查看留言区</h2>
+    <br>
+        <div style="text-align: center">
+            <form action="/comment/read/" method="get">
+                <input type="text" name="keyword" placeholder="关键字">
+                <input type="submit" value="查找" class="btn btn-default">
+            </form>
+        </div>
+    <div class="default-table" style="text-align: center">
+            <table class="table-striped, table-bordered, table-hover" style="font-size: large">
+                <thead>
+                    <th style="text-align: center" width="200">留言时间</th>
+                    <th style="text-align: center" width="200">留言来源</th>
+                    <th style="text-align: center" width="200">留言信息</th>
+                </thead>
+                <br>
+                <tbody>
+                <!--这里是一个循环，data相当于这里的函数参数，需要在views里的render函数提供-->
+                    {% for line in res %}
+                    <tr>
+                        <td style="text-align: center" class="pos-relative">{{line.date}}</td>
+                        <td style="text-align: center" class="pos-relative">{{ line.nickname }}</td>
+                        <td style="text-align: center" class="pos-relative">{{ line.info }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% if messages %}
+                <script>
+                    {% for msg in messages %}
+                        alert('{{ msg.message }}');
+                    {% endfor %}
+                </script>
+            {% endif %}
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1a140741-1767-423b-b242-e60eeae7894d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="project@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="project@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="project@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="project: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bsTeeac9o2ezq0dQwQY80zfKSo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql&#10;sqlite" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/images" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\UniCourse\Database\Project\demo_project\static\js" />
+      <recent name="D:\UniCourse\Database\Project\demo_project\templates" />
+      <recent name="D:\UniCourse\Database\Project\demo_project\netbar\static\images" />
+      <recent name="D:\UniCourse\Database\Project\demo_project\products\images" />
+      <recent name="D:\UniCourse\Database\Project\demo_project\netbar\static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\UniCourse\Database\Project\demo_project\static\images" />
+      <recent name="D:\UniCourse\Database\Project\demo_project\products\static" />
+      <recent name="D:\UniCourse\Database\Project\demo_project\commentboard\static\images" />
+      <recent name="D:\UniCourse\Database\Project\demo_project\netbar\templates" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="demo_project" type="Python.DjangoServer" factoryName="Django server">
+      <module name="demo_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="demo_project.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="project@127.0.0.1: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="project@127.0.0.1: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@1867aa30" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a140741-1767-423b-b242-e60eeae7894d" name="Default Changelist" comment="" />
+      <created>1589419898196</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589419898196</updated>
+      <workItem from="1589419900189" duration="6324000" />
+      <workItem from="1589432982474" duration="14284000" />
+      <workItem from="1589534128527" duration="361000" />
+      <workItem from="1589861567110" duration="6833000" />
+      <workItem from="1589884461538" duration="34000" />
+      <workItem from="1589957197928" duration="12190000" />
+      <workItem from="1590283728991" duration="11473000" />
+      <workItem from="1590423167930" duration="4639000" />
+      <workItem from="1590501201023" duration="12891000" />
+      <workItem from="1590543748586" duration="14662000" />
+      <workItem from="1590761528760" duration="163000" />
+      <workItem from="1590979140625" duration="10951000" />
+      <workItem from="1591091949616" duration="11077000" />
+      <workItem from="1591104986322" duration="12401000" />
+      <workItem from="1591160794406" duration="51295000" />
+      <workItem from="1591326546787" duration="7594000" />
+      <workItem from="1591412741161" duration="929000" />
+      <workItem from="1591413995903" duration="1415000" />
+      <workItem from="1591415436790" duration="1615000" />
+      <workItem from="1591417591540" duration="28543000" />
+      <workItem from="1591447786581" duration="19255000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="133" y="0" key="#HTTP_Proxy" timestamp="1589451039191">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="133" y="0" key="#HTTP_Proxy/0.0.1280.689@0.0.1280.689" timestamp="1589451039191" />
+    <state x="133" y="0" key="#Notifications" timestamp="1591447438914">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="133" y="0" key="#Notifications/0.0.1280.689@0.0.1280.689" timestamp="1591447438914" />
+    <state x="233" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590555756051">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="233" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1590555756051" />
+    <state x="338" y="131" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590555748292">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="338" y="131" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.689@0.0.1280.689" timestamp="1590555748292" />
+    <state x="309" y="34" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591413398528">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="309" y="34" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.689@0.0.1280.689" timestamp="1591413398528" />
+    <state x="371" y="44" key="FileChooserDialogImpl" timestamp="1591413640777">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="371" y="44" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1591413640777" />
+    <state width="1227" height="279" key="GridCell.Tab.0.bottom" timestamp="1591494568492">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1227" height="279" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1591494568492" />
+    <state width="1227" height="279" key="GridCell.Tab.0.center" timestamp="1591494568492">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1227" height="279" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1591494568492" />
+    <state width="1227" height="279" key="GridCell.Tab.0.left" timestamp="1591494568492">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1227" height="279" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1591494568492" />
+    <state width="1227" height="279" key="GridCell.Tab.0.right" timestamp="1591494568492">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1227" height="279" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1591494568492" />
+    <state width="258" height="550" key="HiddenNamespacesPopup" timestamp="1589455046461">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="258" height="550" key="HiddenNamespacesPopup/0.0.1280.689@0.0.1280.689" timestamp="1589455046461" />
+    <state x="26" y="0" key="SettingsEditor" timestamp="1589968442134">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="26" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1589968442134" />
+    <state x="295" y="24" width="675" height="655" key="StructurePopup" timestamp="1591251298103">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="295" y="24" width="675" height="655" key="StructurePopup/0.0.1280.689@0.0.1280.689" timestamp="1591251298103" />
+    <state x="422" y="200" width="436" height="323" key="com.intellij.database.actions.DdlActions$CommentOnObjectAction$1" timestamp="1590558719422">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="422" y="200" width="436" height="323" key="com.intellij.database.actions.DdlActions$CommentOnObjectAction$1/0.0.1280.689@0.0.1280.689" timestamp="1590558719422" />
+    <state x="428" y="203" width="425" height="318" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1591438257051">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="428" y="203" width="425" height="318" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1280.689@0.0.1280.689" timestamp="1591438257051" />
+    <state x="121" y="0" key="com.intellij.database.dbimport.ImportDialog" timestamp="1591255055097">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="121" y="0" key="com.intellij.database.dbimport.ImportDialog/0.0.1280.689@0.0.1280.689" timestamp="1591255055097" />
+    <state x="309" y="106" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1591096026179">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="309" y="106" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.1280.689@0.0.1280.689" timestamp="1591096026179" />
+    <state x="386" y="126" width="508" height="426" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1590557238807">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="386" y="126" width="508" height="426" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1280.689@0.0.1280.689" timestamp="1590557238807" />
+    <state x="339" y="43" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1589968435206">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="339" y="43" key="com.intellij.database.run.ParametersPanel.Standalone/0.0.1280.689@0.0.1280.689" timestamp="1589968435206" />
+    <state x="229" y="0" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1591489680223">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="229" y="0" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1280.689@0.0.1280.689" timestamp="1591489680223" />
+    <state x="219" y="0" width="840" height="687" key="search.everywhere.popup" timestamp="1591493071877">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="219" y="0" width="840" height="687" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1591493071877" />
+  </component>
+</project>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/images/favicon.ico" rel="SHORTCUT ICON">
+        <!-- css -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- js -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>网吧通知</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+</head>
+<body background="/static/images/email-pattern.png">
+    <nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/login/">主页</a>
+            </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/notice/">公告</a></li>
+                        <li class="active"><a href="/consume/">消费信息</a></li>
+                        <li class="active"><a href="/appointment/">预定座位</a></li>
+                        <li class="active"><a href="/personal_info/show/">个人信息</a></li>
+                        <li class="active"><a href="/products/">购买商品</a></li>
+                        <li class="active"><a href="/comment/submit/">留言板</a></li>
+                    </ul>
+                </div>
+	</div>
+    </nav>
+    <div class="container">
+         <form action="/notice/" method="get">
+             <div class="jumbotron">
+                 <h1 style="text-align: center">网吧通知</h1>
+                 <div style="text-align: center">
+                      <table class="default-table">
+                        <input type="text" name="keyword" placeholder="关键字">
+                        <input type="submit" value="查询">
+                    </table>
+                 </div>
+             </div>
+        </form>
+            <div class="default-table">
+                <table class="table table-hover">
+                <thead>
+                    <th style="text-align: center">发布时间</th>
+                    <th style="text-align: center">公告内容</th>
+                </thead>
+                <br>
+                <tbody>
+                     {% for line in res %}
+                    <tr>
+                        <td align="center">{{line.time}}</td>
+                        <td align="center">{{ line.info }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            </div>
+    </div>
+</body>
+</html>

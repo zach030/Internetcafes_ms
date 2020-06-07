@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+
+<html lang="zxx">
+
+<head>
+    <link href="/static/images/favicon.ico" rel="SHORTCUT ICON">
+	<title>网吧管理系统</title>
+	<!-- Meta-Tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="">
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta-Tags -->
+	<!-- Stylesheets -->
+	<link href="../static/css/style.css" rel='stylesheet' type='text/css' />
+	<!--// Stylesheets -->
+	<!--online fonts-->
+	<!--<link href="http://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">-->
+	<!--//online fonts-->
+</head>
+
+<body>
+	<h1>网吧管理系统</h1>
+	<div class="w3ls-login box">
+		<img src="../static/images/logo.png" alt="logo_img" />
+		<!-- form starts here -->
+		<form action="/login/" method="POST">
+            {% csrf_token %}
+			<div class="agile-field-txt">
+				<input type="email" name="email" placeholder="username" required="true" />
+			</div>
+			<div class="agile-field-txt">
+				<input type="password" name="password" placeholder="password" required="true" id="myInput" />
+				<div class="agile_label">
+					<input id="check3" name="check3" type="checkbox" value="show password">
+					<label class="check" for="check3">Remember me</label>
+				</div>
+			</div>
+			<div class="w3ls-bot">
+				<input type="submit" value="LOGIN">
+			</div>
+		</form>
+	</div>
+	<!-- //form ends here -->
+	<!--copyright-->
+	<div class="copy-wthree">
+		<p>Copyright &copy; 2020.Company name All rights reserved.</p>
+	</div>
+	<!--//copyright-->
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/images/favicon.ico" rel="SHORTCUT ICON">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- js -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>提交订单</title>
+</head>
+<body background="/static/images/email-pattern.png">
+    <nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/login/">主页</a>
+            </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/notice/">公告</a></li>
+                        <li class="active"><a href="/consume/">消费信息</a></li>
+                        <li class="active"><a href="/appointment/">预定座位</a></li>
+                        <li class="active"><a href="/personal_info/show/">个人信息</a></li>
+                        <li class="active"><a href="/products/">购买商品</a></li>
+                        <li class="active"><a href="/comment/submit/">留言板</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</div>
+    </nav>
+    <h2 style="text-align: center">订单提交成功!</h2>
+    <br>
+    <h3 style="text-align: center">商品列表</h3>
+    <table class="table-bordered" style="font-size: large">
+        <thead>
+            <th style="text-align: center" width="250">商品名称</th>
+            <th style="text-align: center" width="250">商品图片</th>
+            <th style="text-align: center" width="250">商品单价</th>
+            <th style="text-align: center" width="250">数量</th>
+            <th style="text-align: center" width="250">小计</th>
+        </thead>
+        <tbody>
+            {% for order_goods in order_goods_list %}
+            <tr>
+                <td style="text-align: center" class="pos-relative">{{ order_goods.goods_info.name }}</td>
+                <td style="text-align: center" class="pos-relative"><img src="{{ order_goods.goods_info.image_url}}" alt="" width="100" height="100"></td>
+                <td style="text-align: center" class="pos-relative">{{ order_goods.goods_info.price }}元</td>
+                <td style="text-align: center" class="pos-relative">{{ order_goods.goods_num }}</td>
+                <td style="text-align: center" class="pos-relative">{{ order_goods.total_money }}元</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <table/>
+        <h3 style="text-align: center">订单信息</h3>
+    <div>
+        <table class="table-bordered" style="font-size: medium; margin: auto" width="400">
+            <tr>
+                <td style="text-align: center; font-size: medium" width="200">订单编号</td>
+                <td style="text-align: center" width="200">{{ orderinfo.order_id }}</td>
+            </tr>
+            <tr>
+                <td style="text-align: center" width="200">收货人</td>
+                <td style="text-align: center" width="200">{{ orderinfo.name }}</td>
+            </tr>
+            <tr>
+                <td style="text-align: center" width="200">联系电话</td>
+                <td style="text-align: center" width="200">{{ orderinfo.phone }}</td>
+            </tr>
+            <tr>
+                <td style="text-align: center" width="200">备注</td>
+                <td style="text-align: center" width="200">{{ orderinfo.extra }}</td>
+            </tr>
+        </table>
+    </div>
+    <h3 style="text-align: center">总金额结算</h3>
+        <br>
+    <div style="text-align: center">
+        <ul class="list-group">
+            <li class="list-group-item">共<em>{{ total_num }}</em>件商品，总金额<b>{{ total_money }}元</b></li>
+        </ul>
+
+    </div>
+</body>
+</html>

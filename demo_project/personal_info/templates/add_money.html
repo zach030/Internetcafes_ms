@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/images/favicon.ico" rel="SHORTCUT ICON">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- js -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>充值</title>
+</head>
+<body background="/static/images/email-pattern.png">
+    <nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/login/">主页</a>
+            </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/notice/">公告</a></li>
+                        <li class="active"><a href="/consume/">消费信息</a></li>
+                        <li class="active"><a href="/appointment/">预定座位</a></li>
+                        <li class="active"><a href="/personal_info/show/">个人信息</a></li>
+                        <li class="active"><a href="/products/">购买商品</a></li>
+                        <li class="active"><a href="/comment/submit/">留言板</a></li>
+                    </ul>
+                </div>
+	</div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h2 style="text-align: center" class="display">账户充值</h2>
+        </div>
+        <form action="/personal_info/money/" method="post">
+                <div style="text-align: center;font-size: larger">
+                    <label>充值金额</label>
+                    <input type="text" name="money" value="{{ info.money }}">
+                </div>
+                <br>
+                <div style="text-align: center; font-size: larger">
+                    <label>充值方式</label>
+                    <label><input type="checkbox" name="wechat" value="">微信支付</label>
+                    <label><input type="checkbox" name="alipay" value="">支付宝</label>
+                </div>
+                <br>
+                <div style="font-size: larger; text-align: center">
+                    <input type="submit" value="提交">
+                    <input type="hidden" name="id" value="{{ info.id }}">
+                </div>
+        </form>
+    </div>
+
+</body>
+</html>

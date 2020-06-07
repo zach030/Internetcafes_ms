@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/images/favicon.ico" rel="SHORTCUT ICON">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- js -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>消费信息</title>
+</head>
+<body background="/static/images/email-pattern.png">
+    <nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header" style="background-color: white">
+            <a class="navbar-brand" href="/login/">主页</a>
+            </div>
+                <div>
+                    <ul class="nav navbar-nav" style="background-color: white">
+                        <li class="active"><a href="/notice/">公告</a></li>
+                        <li class="active"><a href="/consume/">消费信息</a></li>
+                        <li class="active"><a href="/appointment/">预定座位</a></li>
+                        <li class="active"><a href="/personal_info/show/">个人信息</a></li>
+                        <li class="active"><a href="/products/">购买商品</a></li>
+                        <li class="active"><a href="/comment/submit/">留言板</a></li>
+                    </ul>
+                </div>
+	</div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 style="text-align: center">用户消费信息</h1>
+        </div>
+        <style>
+            .jumbotron{
+                height: auto;
+            }
+        </style>
+        <div class="default-table">
+            <table class="table-hover" style="font-size: large">
+                <thead>
+                    <tr>
+                        <th style="text-align: center" width="250">编号</th>
+                        <th width="250" style="text-align: center">用户昵称</th>
+                        <th width="250" style="text-align: center">消费细节</th>
+                        <th width="250" style="text-align: center">消费金额</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in info %}
+                    <tr>
+                        <td style="text-align: center" class="pos-relative">{{ i.id }}</td>
+                        <td style="text-align: center" class="pos-relative">{{ i.name }}</td>
+                        <td style="text-align: center" class="pos-relative">{{ i.detail }}</td>
+                        <td style="text-align: center" class="pos-relative">{{ i.money }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body background="/static/images/email-pattern.png">
+</html>

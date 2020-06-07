@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/images/favicon.ico" rel="SHORTCUT ICON">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- js -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>商品信息</title>
+</head>
+<body background="/static/images/email-pattern.png">
+    <nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-toggler" href="/login/">主页</a>
+        </div>
+        <div>
+            <ul class="nav navbar-toggler">
+                <li class="active"><a href="/notice/">公告</a></li>
+                <li class="active"><a href="/consume/">消费信息</a></li>
+                <li class="active"><a href="/appointment/">预定座位</a></li>
+                <li class="active"><a href="/personal_info/show/">个人信息</a></li>
+                <li class="active"><a href="/products/">购买商品</a></li>
+                <li class="active"><a href="/comment/submit/">留言板</a></li>
+            </ul>
+        </div>
+	</div>
+    </nav>
+    <div class="container"></div>
+    <form action="/products/" method="POST">
+        {% extends 'base.html' %}
+        {% block content %}
+            <div class="jumbotron">
+                <h1 style="text-align: center" class="display">商品信息</h1>
+                <div class="guest_cart fr" style="text-align: right">
+                    <a href="/products/my_cart/" class="cart_name fl" style="font-size: medium">我的购物车</a>
+                </div>
+            </div>
+            <div class="row">
+                {% for product in products %}
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="{{ product.image_url }}" alt="Card image cap">
+                      <div class="card-body">
+                        <h3 class="card-title">{{ product.name }}</h3>
+                        <p class="card-text">￥{{ product.price }}</p>
+                        <a href="/products/add_cart/?id={{ product.id }}" id="add_cart" class="btn btn-primary">加入购物车</a>
+                      </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        {% endblock %}
+    </form>
+</body>
+</html>

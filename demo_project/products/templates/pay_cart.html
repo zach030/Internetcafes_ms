@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/images/favicon.ico" rel="SHORTCUT ICON">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- js -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>付款</title>
+</head>
+<body background="/static/images/email-pattern.png">
+    <nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/login/">主页</a>
+            </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/notice/">公告</a></li>
+                        <li class="active"><a href="/consume/">消费信息</a></li>
+                        <li class="active"><a href="/appointment/">预定座位</a></li>
+                        <li class="active"><a href="/personal_info/show/">个人信息</a></li>
+                        <li class="active"><a href="/products/">购买商品</a></li>
+                        <li class="active"><a href="/comment/submit/">留言板</a></li>
+                    </ul>
+                </div>
+	</div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display" style="text-align: center">商品列表</h1>
+        </div>
+            <div>
+                <table class="table-bordered" style="font-size: large">
+                    <thead>
+                        <th style="text-align: center" width="250">商品名称</th>
+                        <th style="text-align: center" width="250">商品图片</th>
+                        <th style="text-align: center" width="250">商品单价</th>
+                        <th style="text-align: center" width="250">数量</th>
+                        <th style="text-align: center" width="250">小计</th>
+                    </thead>
+                    <tbody>
+                        {% for cart_goods in cart_goods_list %}
+                            <tr>
+                                <td style="text-align: center" class="pos-relative">{{ cart_goods.name }}</td>
+                                <td style="text-align: center" class="pos-relative">
+                                    <img src="{{ cart_goods.image_url }}" width="100" height="100">
+                                </td>
+                                <td style="text-align: center" class="pos-relative">{{ cart_goods.price }}元</td>
+                                <td style="text-align: center" class="pos-relative">{{ cart_goods.goods_num }}</td>
+                                <td style="text-align: center" class="pos-relative">{{ cart_goods.total_money }}元</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div style="text-align: center">
+            <br>
+            <label style="text-align: right; font-size: large">付款金额<mark>{{ cart_goods_money }}</mark></label>
+            <br>
+            <br>
+            <div style="text-align: center">
+                <label style="font-size: larger">充值方式</label>
+                <label><input type="checkbox" name="wechat" value="1" id="a1" style="font-size: larger">微信支付</label>
+                <label><input type="checkbox" name="alipay" value="2" id="a2" style="font-size: larger">支付宝</label>
+            </div>
+            <br>
+            <form action="/products/submit_order/" method="post">
+                {% csrf_token %}
+                <div>
+                    <label>桌号</label>
+                    <label><input type="text" name="id"></label>
+                    <label>收货人</label>
+                    <label><input type="text" name="name"></label>
+                    <label>联系方式</label>
+                    <label><input type="text" name="phone"></label>
+                    <label>备注</label>
+                    <label><input type="text" name="extra"></label>
+                </div>
+                <br>
+            <div>
+                <input type="submit" value="提交" class="button" style="text-align: right">
+            </div>
+        </form>
+        </div>
+</body>
+</html>

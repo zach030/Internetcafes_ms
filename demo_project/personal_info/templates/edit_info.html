@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/images/favicon.ico" rel="SHORTCUT ICON">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- js -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>个人设置</title>
+</head>
+<body background="/static/images/email-pattern.png">
+    <nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/login/">主页</a>
+            </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/notice/">公告</a></li>
+                        <li class="active"><a href="/consume/">消费信息</a></li>
+                        <li class="active"><a href="/appointment/">预定座位</a></li>
+                        <li class="active"><a href="/personal_info/show/">个人信息</a></li>
+                        <li class="active"><a href="/products/">购买商品</a></li>
+                        <li class="active"><a href="/comment/submit/">留言板</a></li>
+                    </ul>
+                </div>
+	</div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h2 class="display" style="text-align: center">完善个人资料</h2>
+        </div>
+        <form action="/personal_info/edit/" method="post">
+        <div style="text-align: center">
+            <label style="font-size: larger">个人昵称</label>
+            <input type="text" name="nickname" maxlength="30" value="{{ info.nickname }}">
+        </div>
+        <div style="text-align: center">
+            <label style="font-size: larger">性别</label>
+            <input type="text" name="sex" maxlength="10" value="{{ info.sex }}">
+        </div>
+        <div style="text-align: center">
+            <label style="font-size: larger">年龄</label>
+            <input type="text" name="age" value="{{ info.age }}">
+        </div>
+        <div style="text-align: center">
+            <input type="submit" value="提交">
+            <input type="hidden" name="id" value="{{ info.id }}">
+        </div>
+    </form>
+    </div>
+
+</body>
+</html>

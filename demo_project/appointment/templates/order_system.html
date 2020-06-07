@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <title>预定页面</title>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/static/images/favicon.ico" rel="SHORTCUT ICON">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- js -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body background="/static/images/email-pattern.png">
+    <nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/login/">主页</a>
+            </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/notice/">公告</a></li>
+                        <li class="active"><a href="/consume/">消费信息</a></li>
+                        <li class="active"><a href="/appointment/">预定座位</a></li>
+                        <li class="active"><a href="/personal_info/show/">个人信息</a></li>
+                        <li class="active"><a href="/products/">购买商品</a></li>
+                        <li class="active"><a href="/comment/submit/">留言板</a></li>
+                    </ul>
+                </div>
+	</div>
+    </nav>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 style="text-align: center">网吧预订系统</h1>
+        <p style="text-align: center">简易的网吧预订系统</p>
+    </div>
+
+    <h3 style="text-align: center">当前网吧机器信息</h3>
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>电脑编号</th>
+            <th>CPU</th>
+            <th>显卡</th>
+            <th>内存</th>
+            <th>硬盘</th>
+            <th>预约时间</th>
+            <th>消费金额</th>
+            <th>剩余桌位</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for ticket in tickets %}
+        <tr>
+            <td>{{ ticket.num }}</td>
+            <td>{{ ticket.CPU }}</td>
+            <td>{{ ticket.Graphics }}</td>
+            <td>{{ ticket.Memory }}</td>
+            <td>{{ ticket.Disk }}</td>
+            <td>{{ ticket.time|date:"Y-m-d H:i" }}</td>
+            <td>{{ ticket.money }}</td>
+            <td>{{ ticket.seats }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <h2 style="text-align: center">输入用户信息开始预定</h2>
+
+    <form action="{% url 'order' %}" method="post" >
+          {% csrf_token %}
+        <div class="form-group">
+            <div class="col-xs-2">
+                <label for="ticket_num">机器编号</label>
+                {{ ticket_form.ticket_num }}
+                {% for error in ticket_form.ticket_num.errors %}
+                     <h6 style="color: red"><strong>{{ error|escape }}</strong></h6>
+                {% endfor %}
+            </div>
+            <div class="col-xs-2">
+                <label for="name">用户姓名</label>
+                {{ ticket_form.name }}
+                {% for error in ticket_form.name.errors %}
+                     <h6 style="color: red"><strong>{{ error|escape }}</strong></h6>
+                {% endfor %}
+            </div>
+            <div class="col-xs-2">
+                <label for="phone_number">手机号</label>
+                {{ ticket_form.phone_number }}
+                {% for error in ticket_form.phone_number.errors %}
+                     <h6 style="color: red"><strong>{{ error|escape }}</strong></h6>
+                {% endfor %}
+            </div>
+            <div class="col-xs-2">
+                <br>
+                <button type="submit" name="order" class="btn btn-default">购买</button>
+                <h6 style="color: red"><strong>{{ order_message }}</strong></h6>
+            </div>
+        </div>
+    </form>
+
+    <br><br><br><br>
+    <h2 style="text-align: center">预订信息查询</h2>
+    <h5 style="text-align: center">查询结果在下方列表栏中</h5>
+
+    <form action="{% url 'query' %}" method="post" >
+          {% csrf_token %}
+        <div class="form-group">
+            <div class="col-xs-2">
+                <label for="name">姓名</label>
+                 {{ person_form.name }}
+                 {% for error in person_form.name.errors %}
+                     <h6 style="color: red"><strong>{{ error|escape }}</strong></h6>
+                 {% endfor %}
+            </div>
+            <div class="col-xs-2">
+                <label for="phone_number">电话号码</label>
+                {{ person_form.phone_number }}
+                {% for error in person_form.phone_number.errors %}
+                    <h6 style="color: red"><strong>{{ error|escape }}</strong></h6>
+                {% endfor %}
+            </div>
+            <div class="col-xs-2">
+                <br>
+                <button type="submit" name="submit" value="find" class="btn btn-default">查询</button>
+            </div>
+            <div class="col-xs-2">
+                <br>
+                <h6 style="color: red">{{ query_message }}{{ cansel_message }}</h6>
+            </div>
+        </div>
+    </form>
+
+    <br><br><br><br>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>用户姓名</th>
+            <th>电话号码</th>
+            <th>机器编号</th>
+            <th>消费金额</th>
+            <th>预约时间</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if show %}
+        {% for person in persons %}
+        <tr>
+            <td>{{ person.name }}</td>
+            <td>{{ person.phone_number }}</td>
+            <td>{{ person.ticket_name }}</td>
+            <td>{{ person.ticket_money }}</td>
+            <td>{{ person.ticket_time|date:"Y-m-d H:i" }}</td>
+        </tr>
+        {% empty %}
+         <tr>
+            <td>暂无预约</td>
+            <td>None</td>
+            <td>None</td>
+            <td>None</td>
+         </tr>
+        {% endfor %}
+        {% endif %}
+        </tbody>
+    </table>
+
+    {% if show %}
+    <form action="{% url 'query'  %}" method="post" >
+          {% csrf_token %}
+        <div class="form-group">
+            <div class="col-xs-3">
+                <h5>您可以取消此订单，确定要取消吗？</h5>
+            </div>
+            <div class="col-xs-1">
+                <button type="submit" name="submit" value="yes" class="btn btn-default">确定取消</button>
+            </div>
+            <div class="col-xs-1">
+                <button type="submit" name="submit" value="no" class="btn btn-default">放弃操作</button>
+            </div>
+        </div>
+    </form>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
